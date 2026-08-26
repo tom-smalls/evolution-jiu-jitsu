@@ -364,7 +364,7 @@
 
   /* ---------- 4-COL STAFF ---------- */
   .staff-grid.staff-grid-4{grid-template-columns:repeat(4,1fr);gap:24px;}
-  .staff-grid-4 .staff-photo{height:230px;}
+  .staff-grid-4 .staff-photo{height:auto;aspect-ratio:3/4;}
   .staff-grid-4 .staff-body{padding:20px;}
   .staff-grid-4 .staff-body h3{font-size:17px;}
   .staff-grid-4 .staff-body p{font-size:13px;}
