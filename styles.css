@@ -456,7 +456,14 @@
     background:var(--white);border:1px solid var(--line);padding:30px;
     display:flex;flex-direction:column;gap:14px;
   }
-  .book-card img.program-logo{margin-bottom:4px;}
+  .book-card img.program-logo{margin-bottom:4px;max-width:100%;}
+  .book-card .logo-bullyproof,
+  .book-card .logo-combatives,
+  .book-card .logo-mastercycle,
+  .book-card .logo-women{
+    width:160px!important;height:48px!important;object-fit:contain!important;
+    object-position:left center!important;
+  }
   .book-card h3{font-size:20px;}
   .book-card p{font-size:14px;color:#33454f;flex-grow:1;}
   .book-card .book-meta{font-family:var(--mono);font-size:12px;color:#5f7d84;text-transform:uppercase;letter-spacing:0.05em;}
@@ -492,7 +499,7 @@
   }
 
   /* ---------- PROGRAM LOGO SIZE OVERRIDES (kept last so they always win) ---------- */
-  .logo-bullyproof{height:62px!important;width:auto!important;}
-  .logo-combatives{height:36px!important;width:auto!important;}
-  .logo-mastercycle{width:198px!important;height:auto!important;}
-  .logo-women{height:34px!important;width:auto!important;}
+  .logo-bullyproof{height:62px!important;width:auto!important;max-width:100%!important;}
+  .logo-combatives{height:36px!important;width:auto!important;max-width:100%!important;}
+  .logo-mastercycle{width:198px!important;height:auto!important;max-width:100%!important;}
+  .logo-women{height:34px!important;width:auto!important;max-width:100%!important;}
