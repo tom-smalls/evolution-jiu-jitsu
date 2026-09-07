@@ -353,6 +353,13 @@
   .lineage p{margin:0;font-size:13px;color:#435963;}
   .lineage b{color:var(--ink);font-family:var(--display);font-size:13px;letter-spacing:0.03em;text-transform:uppercase;display:block;margin-bottom:3px;}
 
+  .lineage-photo{
+    margin-top:16px;background:var(--white);border:1px solid var(--line);padding:16px;
+  }
+  .lineage-photo img{width:100%;height:auto;display:block;border:2px solid var(--ink);margin-bottom:14px;}
+  .lineage-photo p{margin:0;font-size:13px;color:#435963;}
+  .lineage-photo b{color:var(--ink);font-family:var(--display);font-size:13px;letter-spacing:0.03em;text-transform:uppercase;display:block;margin-bottom:3px;}
+
   /* ---------- PROGRAM LOGOS ---------- */
   .program-logo{height:56px;margin-bottom:22px;display:block;}
   .program-logo.tall{height:74px;}
