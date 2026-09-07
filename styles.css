@@ -335,8 +335,8 @@
   /* ---------- TRUST STRIP ---------- */
   .trust-strip{background:var(--white);border-bottom:1px solid var(--line);padding:26px 0;}
   .trust-row{display:flex;align-items:center;justify-content:center;gap:44px;flex-wrap:wrap;}
-  .trust-row img{height:34px;width:auto;object-fit:contain;filter:grayscale(0.15);}
-  .trust-row .badge-img{height:56px;width:56px;}
+  .trust-row img{object-fit:contain;filter:grayscale(0.15);}
+  .trust-row .badge-img{height:70px;width:70px;}
   .trust-label{font-family:var(--mono);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#5f7d84;margin-right:6px;}
 
   /* ---------- ABOUT IMAGE + LINEAGE ---------- */
@@ -350,8 +350,8 @@
   .lineage b{color:var(--ink);font-family:var(--display);font-size:13px;letter-spacing:0.03em;text-transform:uppercase;display:block;margin-bottom:3px;}
 
   /* ---------- PROGRAM LOGOS ---------- */
-  .program-logo{height:34px;margin-bottom:22px;display:block;}
-  .program-logo.tall{height:44px;}
+  .program-logo{height:56px;margin-bottom:22px;display:block;}
+  .program-logo.tall{height:74px;}
 
   /* ---------- BIRTHDAY PARTIES ---------- */
   .party-layout{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
@@ -490,3 +490,9 @@
     .staff-grid.staff-grid-4{grid-template-columns:1fr;}
     .trial-banner{flex-direction:column;align-items:flex-start;}
   }
+
+  /* ---------- PROGRAM LOGO SIZE OVERRIDES (kept last so they always win) ---------- */
+  .logo-bullyproof{height:62px!important;width:auto!important;}
+  .logo-combatives{height:36px!important;width:auto!important;}
+  .logo-mastercycle{width:198px!important;height:auto!important;}
+  .logo-women{height:34px!important;width:auto!important;}
