@@ -76,7 +76,7 @@
     transform:rotate(-6deg);
     border:2px solid var(--white);
   }
-  nav ul{display:flex;gap:26px;list-style:none;}
+  nav ul{display:flex;gap:18px;list-style:none;flex-wrap:wrap;justify-content:flex-end;row-gap:10px;}
   nav ul li a{
     color:#d8d2c6;font-size:13px;letter-spacing:0.06em;
     text-transform:uppercase;font-weight:500;
@@ -299,9 +299,15 @@
   footer{background:var(--ink);color:#a89f92;padding:50px 0 30px;}
   .footer-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;padding-bottom:26px;border-bottom:1px solid #3a352f;margin-bottom:24px;}
   .footer-brand{font-family:var(--display);color:var(--white);font-size:20px;}
-  .footer-social{display:flex;gap:14px;}
-  .footer-social a{width:36px;height:36px;border:1px solid #4a4441;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;}
-  .footer-social a:hover{border-color:var(--red);color:var(--red);}
+  .footer-social{display:flex;gap:12px;flex-wrap:wrap;}
+  .footer-social-btn{
+    padding:10px 18px;border-radius:2px;font-family:var(--display);font-size:13px;
+    letter-spacing:0.04em;text-transform:uppercase;color:var(--white);
+  }
+  .footer-social-btn.fb{background:#1877F2;}
+  .footer-social-btn.fb:hover{background:#125fc4;}
+  .footer-social-btn.ig{background:linear-gradient(45deg, #fd5949, #d6249f, #285AEB);}
+  .footer-social-btn.ig:hover{opacity:0.88;}
   .footer-legal{font-size:12px;line-height:1.7;max-width:900px;}
 
   @media (max-width:900px){
@@ -311,6 +317,8 @@
     .staff-grid{grid-template-columns:1fr;}
     .distance-grid{grid-template-columns:repeat(2,1fr);}
     .party-layout{grid-template-columns:1fr;gap:32px;}
+    .review-grid{grid-template-columns:1fr;}
+    .follow-grid{grid-template-columns:1fr;}
     nav ul{display:none;}
     .burger{display:block;}
   }
@@ -318,6 +326,7 @@
     .benefits{grid-template-columns:repeat(2,1fr);}
     .distance-grid{grid-template-columns:1fr;}
     .party-facts{grid-template-columns:1fr;}
+    .review-cta{flex-direction:column;align-items:flex-start;}
     section{padding:64px 0;}
   }
 
@@ -351,6 +360,56 @@
   .pf-value{font-family:var(--display);font-size:16px;color:var(--ink);letter-spacing:0.01em;}
   .pf-value span{font-family:var(--mono);font-size:11px;color:#847d73;text-transform:none;}
 
+  /* ---------- REVIEWS ---------- */
+  .rating-banner{
+    display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;
+    background:var(--paper-dim);border:1px solid var(--line);padding:36px;margin-bottom:44px;
+  }
+  .rating-stars{color:var(--gold);font-size:26px;letter-spacing:4px;}
+  .rating-figure{font-family:var(--display);font-size:34px;color:var(--ink);}
+  .rating-figure span{font-family:var(--mono);font-size:13px;color:#847d73;text-transform:none;}
+  .rating-count{font-family:var(--mono);font-size:13px;color:#847d73;margin-bottom:14px;}
+  .review-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-bottom:44px;}
+  .review-card{background:var(--white);border:1px solid var(--line);padding:24px;}
+  .review-stars{color:var(--gold);font-size:14px;letter-spacing:2px;margin-bottom:12px;}
+  .review-card p{font-size:14px;color:#453f3a;margin-bottom:14px;}
+  .review-source{font-family:var(--mono);font-size:11px;color:#847d73;text-transform:uppercase;letter-spacing:0.05em;}
+  .review-cta{
+    background:var(--ink);color:var(--white);padding:32px 36px;
+    display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;
+  }
+  .review-cta h3{color:var(--white);font-size:19px;margin-bottom:6px;}
+  .review-cta p{color:#cfc9bd;font-size:14px;margin:0;max-width:440px;}
+
+  /* ---------- FOLLOW US / SOCIAL ---------- */
+  .follow-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:stretch;}
+  .follow-card{background:var(--white);border:1px solid var(--line);overflow:hidden;display:flex;flex-direction:column;}
+  .follow-card-head{padding:22px 24px;display:flex;align-items:center;gap:14px;border-bottom:1px solid var(--line);}
+  .follow-icon{
+    width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    font-family:var(--display);font-size:16px;color:var(--white);flex-shrink:0;
+  }
+  .follow-icon.fb{background:#1877F2;}
+  .follow-icon.ig{background:radial-gradient(circle at 30% 110%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);}
+  .follow-card-head h3{font-size:17px;margin-bottom:2px;}
+  .follow-card-head span{font-family:var(--mono);font-size:12px;color:#847d73;}
+  .follow-embed{flex-grow:1;min-height:380px;background:var(--paper-dim);}
+  .follow-embed iframe{width:100%;height:100%;min-height:380px;border:0;display:block;}
+  .follow-ig-body{padding:28px 24px;flex-grow:1;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:14px;}
+  .follow-ig-body p{font-size:14px;color:#453f3a;}
+  .follow-bar{
+    display:flex;justify-content:center;gap:16px;margin-top:36px;flex-wrap:wrap;
+  }
+  .follow-btn{
+    display:inline-flex;align-items:center;gap:10px;padding:14px 24px;
+    font-family:var(--display);font-size:14px;letter-spacing:0.04em;text-transform:uppercase;
+    color:var(--white);border-radius:2px;
+  }
+  .follow-btn.fb{background:#1877F2;}
+  .follow-btn.fb:hover{background:#125fc4;}
+  .follow-btn.ig{background:linear-gradient(45deg, #fd5949, #d6249f, #285AEB);}
+  .follow-btn.ig:hover{opacity:0.9;}
+
   /* ---------- PRICING ---------- */
   .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
   .price-card{
@@ -370,6 +429,7 @@
   .price-tier .tier-name{font-size:13px;color:#453f3a;}
   .price-tier .tier-amount{font-family:var(--display);font-size:22px;color:var(--ink);white-space:nowrap;}
   .price-tier .tier-amount span{font-family:var(--mono);font-size:11px;color:#847d73;text-transform:none;}
+  .price-perk{font-family:var(--mono);font-size:11px;color:var(--red-deep);text-transform:uppercase;letter-spacing:0.03em;margin:-8px 0 18px;}
   .price-card .btn{margin-top:auto;text-align:center;}
   .price-note{margin-top:22px;font-family:var(--mono);font-size:12px;color:#847d73;text-align:center;}
 
